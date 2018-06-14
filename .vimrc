@@ -73,3 +73,10 @@ syntax enable
 "set t_Co=256
 colorscheme industry
 
+augroup default
+  autocmd!
+  autocmd BufNewFile *.c 0put='#include <stdio.h>'
+  autocmd BufNewFile *.c 1put=''
+  autocmd BufNewFile *.c 2put='int main(void){'
+  autocmd BufNewFile *.c 3put='}'
+augroup END
